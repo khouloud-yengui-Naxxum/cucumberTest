@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="105.755">
+<testcase classname="contact page feature" name="make sure that the email field is visible" time="16.258">
+<system-out><![CDATA[Given when user open the website and go to login page.......................passed
+When user fill email as "yosraa" and password as "test123"  and click login.passed
+And click on contact button.................................................passed
+Then email test field should be visible.....................................passed
+Then browser should be closed...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="contact page feature" name="Add new contacts" time="15.9">
+<system-out><![CDATA[Given when user open the website and go to login page.......................passed
+When user fill email as "yosraa" and password as "test123"  and click login.passed
+And click on contact button.................................................passed
+And click on new contact button.............................................passed
+And fill the firstname and lastname.........................................passed
+Then new contacts shloud be added...........................................passed
+Then browser should be closed...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the login fonctionality" name="to login with  invalid credentials" time="10.18">
+<system-out><![CDATA[Given when user open the website and go to login page.......................passed
+When user fill email as "wrong" and password as "wrong"  and click login....passed
+Then Error massage should appear............................................passed
+Then browser should be closed...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the login fonctionality" name="to login with  invalid credentials 2" time="63.237">
+<failure message="Unable to find element with locator By.xpath: //input[@value='Login']&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: 'DESKTOP-JLH41GV', ip: '192.168.1.231', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_321'&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given when user open the website and go to login page.......................passed
+When user fill email as "yosraa" and password as "test123"  and click login.passed
+Then Error massage should appear............................................failed
+Then browser should be closed...............................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //input[@value='Login']
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'DESKTOP-JLH41GV', ip: '192.168.1.231', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at StepsDefenitions.LoginSteps.error_massage_should_appear(LoginSteps.java:54)
+	at ✽.Error massage should appear(file:///C:/Users/KhouloudYengui/Desktop/cucumbertest/src/test/java/Features/login.feature:8)
+]]></failure>
+</testcase>
+</testsuite>
